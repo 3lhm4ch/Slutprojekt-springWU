@@ -1,0 +1,90 @@
+/* Universal */
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    grid-area: nv;
+}
+
+a{
+    width: 100px;
+}
+
+/* Index  */
+
+#indexwrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 300px 7% auto;
+    grid-template-areas: 
+    "img"
+    "nv"
+    "imn";
+}
+
+#indeximg{
+    grid-area: img;
+}
+
+#indexmain{
+    grid-area: imn;
+}
+
+/* Kontakter */
+
+#contactwrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 7% 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nv nv nv"
+    "sec1 sec2 sec3"
+}
+#sec1 {
+    grid-area: sec1;
+}
+#sec2 {
+    grid-area: sec2;
+}
+#sec3 {
+    grid-area: sec3;
+}
+
+/* Historia */
+
+#historywrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 7% auto;
+    grid-template-columns: 1fr 40%;
+    grid-template-areas: 
+    "nv nv"
+    "hmn bi";
+}
+
+#historyabout{
+    grid-area: hmn;
+}
+
+#historypics{
+    grid-area: bi;
+}
+
+/* Tider */
+
+#timeswrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 7% auto;
+    grid-template-areas: 
+    "nv"
+    "tmn";
+}
+
+#timesmain{
+    grid-area: tmn;
+}
