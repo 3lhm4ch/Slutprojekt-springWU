@@ -130,3 +130,47 @@ footer{
 #timesmain{
     grid-area: tmn;
 }
+
+/* MOBIL */
+
+.menu-button{
+    grid-area: mnbutt;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        background-color: blue;
+        color: white;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #indeximg{
+        height: 140px;
+    }
+
+    #indexwrapper{
+        grid-template-rows: 100px 40px auto 50px;
+        grid-template-areas: 
+        "img"
+        "mnbutt"
+        "imn"
+        "ft";
+    }
+}
+
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 600px){
+    body{
+        background-color: pink;
+    }
+
+    .menu-button{
+        display: none;
+    }
+}
