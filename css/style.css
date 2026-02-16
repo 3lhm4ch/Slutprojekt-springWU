@@ -13,16 +13,21 @@ a{
     width: 100px;
 }
 
+footer{
+    grid-area: ft;
+}
+
 /* Index  */
 
 #indexwrapper{
     height: 100vh;
     display: grid;
-    grid-template-rows: 300px 7% auto;
+    grid-template-rows: 300px 7% auto 50px;
     grid-template-areas: 
     "img"
     "nv"
-    "imn";
+    "imn"
+    "ft";
 }
 
 #indeximg{
@@ -38,11 +43,12 @@ a{
 #contactwrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 7% 1fr;
+    grid-template-rows: 7% 1fr 50px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "nv nv nv"
     "sec1 sec2 sec3"
+    "ft ft ft"
 }
 #sec1 {
     grid-area: sec1;
@@ -59,11 +65,12 @@ a{
 #historywrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 7% auto;
+    grid-template-rows: 7% auto 50px;
     grid-template-columns: 1fr 40%;
     grid-template-areas: 
     "nv nv"
-    "hmn bi";
+    "hmn bi"
+    "ft ft";
 }
 
 #historyabout{
@@ -79,10 +86,11 @@ a{
 #timeswrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 7% auto;
+    grid-template-rows: 7% auto 50px;
     grid-template-areas: 
     "nv"
-    "tmn";
+    "tmn"
+    "ft";
 }
 
 #timesmain{
