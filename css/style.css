@@ -6,7 +6,7 @@ html, body{
 }
 
 body{
-    background-color: rgb(222, 222, 222);
+    background-color: white;
     color: black;
 }
 
@@ -62,7 +62,7 @@ footer{
     width: 70vw;
     position: fixed;
     top: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     z-index: 10;
     display: none;
 }
@@ -74,7 +74,15 @@ footer{
 .material-icons{
     padding: 5px;
     margin: 5px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(232, 232, 232, 0.6);
+    border-radius: 10px;
+}
+
+li{
+
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(190, 190, 190, 0.6);
     border-radius: 10px;
 }
 
@@ -119,21 +127,17 @@ footer{
     display: grid;
     height: 100vh;
     grid-template-rows: 40px 1fr 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "nv nv nv"
-    "sec1 sec2 sec3"
-    "ft ft ft"
+    "nv"
+    "cmn"
+    "ft"
+    }
+
+#contactmain{
+    grid-area: cmn;
 }
-#sec1 {
-    grid-area: sec1;
-}
-#sec2 {
-    grid-area: sec2;
-}
-#sec3 {
-    grid-area: sec3;
-}
+
 
 /* Historia */
 
@@ -148,8 +152,17 @@ footer{
     "ft ft";
 }
 
-#historyabout{
+#historymain{
     grid-area: hmn;
+    text-align: center;
+}
+
+#historymain h2{
+    font-size: 2rem;
+}
+
+#historymain p{
+    font-size: 1rem;
 }
 
 #historypics{
@@ -163,13 +176,29 @@ footer{
     height: 100vh;
     grid-template-rows: 40px auto 50px;
     grid-template-areas: 
-    "nv"
-    "tmn"
-    "ft";
+    "nv nv nv"
+    "sec1 sec2 sec3"
+    "ft ft ft";
+    }
+
+#sec1 {
+    grid-area: sec1;
+    text-align: center;
+    border-style: solid;
+}
+#sec2 {
+    grid-area: sec2;
+    text-align: center;
+    border-style: solid;
+}
+#sec3 {
+    grid-area: sec3;
+    text-align: center;
+    border-style: solid;
 }
 
-#timesmain{
-    grid-area: tmn;
+.timeimg{
+    height: 30%;
 }
 
 /* MOBIL */
@@ -178,7 +207,7 @@ footer{
     grid-area: mnbutt;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
     
 
     nav{
@@ -204,18 +233,20 @@ footer{
     grid-template-rows: 40px 1fr 50px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "mnbutt mnbutt mnbutt"
-    "sec1 sec2 sec3"
-    "ft ft ft"
+    "mnbutt"
+    "cmn"
+    "ft"
     }
 
     #timeswrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px auto 50px;
+    grid-template-rows: 40px auto auto auto 50px;
     grid-template-areas: 
     "mnbutt"
-    "tmn"
+    "sec1"
+    "sec2" 
+    "sec3"
     "ft";
     }
 
@@ -235,7 +266,7 @@ footer{
 
 /* DESKTOP */
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 800px){
 
     .menu-button{
         display: none;
