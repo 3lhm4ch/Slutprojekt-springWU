@@ -138,7 +138,13 @@ li{
 
 #contactmain{
     grid-area: cmn;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
+
+
 
 
 /* Historia */
@@ -262,6 +268,14 @@ li{
     "hmn bi"
     "ft ft";
     }
+
+    .card {
+    flex: 1 1 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    }
 }
 
 
@@ -272,5 +286,13 @@ li{
 
     .menu-button{
         display: none;
+    }
+
+    .card {
+    flex: 1 1 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     }
 }
