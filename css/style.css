@@ -21,23 +21,17 @@ nav{
 }
 
 .navbox{
-    background-color: rgb(186, 186, 186);
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-#indexnav.navbox{
+    display: block;
+    width: 50px;
+    height: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
 }
 
-#indexnav.navbox:hover{
-    background-color: rgba(169, 169, 169, 0.6);
-    cursor: pointer;
-}
 .navbox:hover{
     background-color: rgba(169, 169, 169, 0.6);
     cursor: pointer;
@@ -74,7 +68,7 @@ footer{
 
 .menu{
     height: 100vh;
-    width: 70vw;
+    width: 300px;
     position: fixed;
     top: 0;
     background-color: rgb(255, 255, 255);
@@ -98,16 +92,19 @@ footer{
     cursor: pointer;
 }
 
-li{
+.mobilNavbox{
+    display: block;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(225, 225, 225);
     padding: 5px;
     margin: 5px;
-    background-color: rgba(190, 190, 190, 0.6);
-    border-radius: 10px;
+    border-radius: 5px;
+    display: flex;
 }
 
-li:hover{
-    background-color: rgba(169, 169, 169, 0.6);
-    cursor: pointer;
+.mobilNavbox:hover{
+    background-color: rgba(169, 169, 169);
 }
 
 /* Index  */
@@ -150,9 +147,10 @@ li:hover{
 #contactwrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px 1fr 50px;
+    grid-template-rows: 300px 40px 1fr 50px;
     grid-template-columns: 1fr;
     grid-template-areas: 
+    "img"
     "nv"
     "cmn"
     "ft"
@@ -168,7 +166,7 @@ li:hover{
 }
 
 .card {
-    flex: 1 1 300px;
+    flex: 1 1 100px;
     background-color: #f4f4f4;
     padding: 20px;
     border: 1px solid #ddd;
@@ -180,9 +178,10 @@ li:hover{
 #historywrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px auto 50px;
+    grid-template-rows: 300px 40px auto 50px;
     grid-template-columns: 1fr 40%;
     grid-template-areas: 
+    "img img"
     "nv nv"
     "hmn bi"
     "ft ft";
@@ -191,15 +190,29 @@ li:hover{
 #historymain{
     grid-area: hmn;
     text-align: center;
-    margin: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
 }
 
 #historymain h2{
     font-size: 2rem;
+    text-align: center;
+
+}
+
+#historymain h3{
+    font-size: 1,5rem;
 }
 
 #historymain p{
     font-size: 1rem;
+}
+
+.quote{
+    text-align: center;
 }
 
 #historypics{
@@ -211,8 +224,9 @@ li:hover{
 #timeswrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px auto 50px;
+    grid-template-rows: 300px 40px auto 50px;
     grid-template-areas: 
+    "img img img"
     "nv nv nv"
     "sec1 sec2 sec3"
     "ft ft ft";
@@ -264,12 +278,14 @@ li:hover{
         "ft";
     }
 
+
     #contactwrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px 1fr 50px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 40px 1fr 50px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
+    "img"
     "mnbutt"
     "cmn"
     "ft"
@@ -278,8 +294,9 @@ li:hover{
     #timeswrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px auto auto auto 50px;
+    grid-template-rows: 100px 40px auto auto auto 50px;
     grid-template-areas: 
+    "img"
     "mnbutt"
     "sec1"
     "sec2" 
@@ -290,9 +307,10 @@ li:hover{
     #historywrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 40px auto 50px;
+    grid-template-rows: 100px 40px auto 50px;
     grid-template-columns: 1fr 40%;
     grid-template-areas: 
+    "img img"
     "mnbutt mnbutt"
     "hmn bi"
     "ft ft";
@@ -308,4 +326,12 @@ li:hover{
     .menu-button{
         display: none;
     }
+
+    /* .card {
+    flex: 1 1 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+} */
 }
