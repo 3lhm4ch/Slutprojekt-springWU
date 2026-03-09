@@ -5,6 +5,10 @@ html, body{
     padding: 0;
 }
 
+p, h1, h2, h3, h4{
+    font-family: 'Montserrat', sans-serif;
+}
+
 body{
     background-color: white;
     color: black;
@@ -28,6 +32,15 @@ nav{
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
+}
+
+#indexnav.navbox:hover{
+    background-color: rgba(169, 169, 169, 0.6);
+    cursor: pointer;
+}
+.navbox:hover{
+    background-color: rgba(169, 169, 169, 0.6);
+    cursor: pointer;
 }
 
 a{
@@ -80,12 +93,21 @@ footer{
     border-radius: 10px;
 }
 
-li{
+.material-icons:hover{
+    background-color: rgba(169, 169, 169, 0.6);
+    cursor: pointer;
+}
 
+li{
     padding: 5px;
     margin: 5px;
     background-color: rgba(190, 190, 190, 0.6);
     border-radius: 10px;
+}
+
+li:hover{
+    background-color: rgba(169, 169, 169, 0.6);
+    cursor: pointer;
 }
 
 /* Index  */
@@ -134,7 +156,7 @@ li{
     "nv"
     "cmn"
     "ft"
-    }
+}
 
 #contactmain{
     grid-area: cmn;
@@ -142,10 +164,16 @@ li{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin: 20px;
 }
 
-
-
+.card {
+    flex: 1 1 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
 
 /* Historia */
 
@@ -163,6 +191,7 @@ li{
 #historymain{
     grid-area: hmn;
     text-align: center;
+    margin: 20px;
 }
 
 #historymain h2{
@@ -268,14 +297,6 @@ li{
     "hmn bi"
     "ft ft";
     }
-
-    .card {
-    flex: 1 1 100%;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    }
 }
 
 
@@ -286,13 +307,5 @@ li{
 
     .menu-button{
         display: none;
-    }
-
-    .card {
-    flex: 1 1 300px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
     }
 }
