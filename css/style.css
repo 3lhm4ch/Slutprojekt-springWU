@@ -251,7 +251,7 @@ footer{
     "nv nv nv"
     "sec1 sec2 sec3"
     "ft ft ft";
-    }
+}
 
 #sec1 {
     padding-left: 25%;
@@ -284,9 +284,6 @@ footer{
 }
 
 @media screen and (max-width: 800px){
-    
-
-
     nav{
         display: none;
     }
@@ -307,7 +304,6 @@ footer{
     h1{
         font-size: 2rem;
     }
-
 
     #contactwrapper{
         display: grid;
@@ -368,12 +364,9 @@ footer{
     }
 }
 
-
-
 /* DESKTOP */
 
 @media screen and (min-width: 800px){
-
     .menu-button{
         display: none;
     }
