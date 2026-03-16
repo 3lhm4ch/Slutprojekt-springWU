@@ -172,17 +172,34 @@ footer{
     grid-area: cmn;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    gap: 0;
+}
+
+#contacttitle{
+    width: 100%;
+    text-align: center;
 }
 
 .card {
-    flex: 1 1 100px;
-    background-color: #f4f4f4;
+    flex: 0 0 25%;
+    width: 25%;
+    box-sizing: border-box;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 /* Historia */
@@ -293,28 +310,39 @@ footer{
 
 
     #contactwrapper{
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 100px 40px 1fr 50px;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "img"
-    "mnbutt"
-    "cmn"
-    "ft"
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 100px 40px auto 50px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "img"
+        "mnbutt"
+        "cmn"
+        "ft"
+    }
+
+    .card {
+        flex: 1 1 200px;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid black;
     }
 
     #timeswrapper{
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 100px 40px 50% 50% 50% 50px;
-    grid-template-areas: 
-    "img"
-    "mnbutt"
-    "sec1"
-    "sec2" 
-    "sec3"
-    "ft";
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 100px 40px 50% 50% 50% 50px;
+        grid-template-areas: 
+        "img"
+        "mnbutt"
+        "sec1"
+        "sec2" 
+        "sec3"
+        "ft";
+    }
+
+    #sec1,#sec3{
+        padding: 0;
     }
 
     #sec2{
@@ -323,15 +351,15 @@ footer{
     }
 
     #historywrapper{
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 100px 40px auto 50px;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-    "img"
-    "mnbutt"
-    "hmn"
-    "ft";
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 100px 40px 50% 50%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "img"
+        "mnbutt"
+        "hmn"
+        "ft";
     }
 
     #historymain{
