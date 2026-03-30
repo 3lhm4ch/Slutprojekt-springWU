@@ -12,8 +12,8 @@
     --nav-hover: rgba(169, 169, 169, 0.6);
     --nav-mobile-bg: rgb(193, 193, 193);
     
-    --overlay-bg: rgba(0, 0, 0, 0.5);
-    --icon-bg: rgba(232, 232, 232, 0.6);
+    --fade-bg: rgba(0, 0, 0, 0.5);
+    --knapp-bg: rgba(232, 232, 232, 0.6);
 }
 
 /* Universal */
@@ -101,7 +101,7 @@ footer{
     display: none;
     position: fixed;
     inset: 0;
-    background-color: var(--overlay-bg);
+    background-color: var(--fade-bg);
     z-index: 5;
 }
 
@@ -123,7 +123,7 @@ footer{
 .material-icons{
     padding: 5px;
     margin: 5px;
-    background-color: var(--icon-bg);
+    background-color: var(--knapp-bg);
     border-radius: 10px;
 }
 
