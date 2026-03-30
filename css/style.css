@@ -22,7 +22,7 @@ h2{
 }
 
 h3{
-    font-size: 1,5rem;
+    font-size: 1.5rem;
 }
 
 p, a{
@@ -67,7 +67,7 @@ nav{
 
 a{
     width: 100px;
-    opacity: 200%;
+    opacity: 1;
     color: black;
 }
 
@@ -79,13 +79,13 @@ footer{
 /* Hamburgare meny */
 
 .fade-layer{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    display: none;
     z-index: 5;
 }
 
@@ -94,11 +94,11 @@ footer{
 }
 
 .menu{
+    background-image: url("../img/backgroundconcrete.jpg");
     height: 100vh;
-    width: 300px;
+    width: 70vw;
     position: fixed;
     top: 0;
-    background-color: rgb(255, 255, 255);
     z-index: 10;
     display: none;
 }
@@ -120,15 +120,23 @@ footer{
 }
 
 .mobilNavbox{
-    display: block;
-    width: 100px;
-    height: 20px;
-    background-color: rgb(225, 225, 225);
+    /* display: block; */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(193, 193, 193);
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     display: flex;
     text-transform: uppercase;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .mobilNavbox:hover{
@@ -254,37 +262,41 @@ footer{
 #timeswrapper{
     display: grid;
     height: 100vh;
-    grid-template-rows: 300px 40px 1fr 50px;
+    grid-template-rows: 300px 40px 70px 1fr 50px;
     grid-template-columns: 1fr 25% 1fr;
     grid-template-areas: 
     "img img img"
     "nv nv nv"
+    "titl titl titl"
     "sec1 sec2 sec3"
     "ft ft ft";
+}
+
+#title {
+    display: flex;
+    grid-area: titl;
+    justify-content: center;
 }
 
 #sec1 {
     padding-left: 25%;
     grid-area: sec1;
     text-align: center;
-    border-top: solid;
 }
 #sec2 {
     grid-area: sec2;
     text-align: center;
     border-right: solid;
     border-left: solid;
-    border-top: solid;
 }
 #sec3 {
     padding-right: 25%;
     grid-area: sec3;
     text-align: center;
-    border-top: solid;
 }
 
 .timeimg{
-    height: 20vh;
+    height: 18vh;
 }
 
 /* MOBIL */
@@ -337,10 +349,11 @@ footer{
     #timeswrapper{
         display: grid;
         height: 100vh;
-        grid-template-rows: 100px 40px 50% 50% 50% 50px;
+        grid-template-rows: 100px 40px 100px 50% 50% 50% 50px;
         grid-template-areas: 
         "img"
         "mnbutt"
+        "titl"
         "sec1"
         "sec2" 
         "sec3"
@@ -349,11 +362,13 @@ footer{
 
     #sec1,#sec3{
         padding: 0;
+        border-top: solid;
     }
 
     #sec2{
         border-right: none;
         border-left: none;
+        border-top: solid;
     }
 
     #historywrapper{
