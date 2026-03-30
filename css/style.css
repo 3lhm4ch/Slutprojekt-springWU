@@ -1,16 +1,36 @@
+/* Variabler */
+
+:root {
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Birdseye', sans-serif;
+    --bg-image: url("../img/backgroundconcrete.jpg");
+    
+    --text-color: black;
+    --border-color: black;
+    
+    --nav-bg: rgba(255, 255, 255, 0.6);
+    --nav-hover: rgba(169, 169, 169, 0.6);
+    --nav-mobile-bg: rgb(193, 193, 193);
+    
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+    --icon-bg: rgba(232, 232, 232, 0.6);
+}
+
 /* Universal */
 
 html, body{
     margin: 0;
     padding: 0;
-    background-image: url("../img/backgroundconcrete.jpg");
-    background-size: 100vw;
-    color: black;
-    overflow-x: hidden
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-color);
+    overflow-x: hidden;
 }
 
-h1, h2, h3, h4{
-    font-family: 'Montserrat', sans-serif;
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
 }
 
 h1{
@@ -25,20 +45,19 @@ h3{
     font-size: 1.5rem;
 }
 
-p, a{
-    font-family: Birdseye, sans-serif;
+p, a {
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
+    color: var(--text-color);
 }
 
-#indeximg{
-    grid-area: img;
-    width: 100vw;
-    height: 340px;
-    object-fit: cover;
-    border-bottom: solid;
+ul{
+    list-style-type: none;
 }
+
+/* Nav och Footer */
 
 nav{
     display: flex;
@@ -47,21 +66,21 @@ nav{
 }
 
 .navbox{
-    display: block;
     width: 90px;
     height: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--nav-bg);
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .navbox:hover{
-    background-color: rgba(169, 169, 169, 0.6);
+    background-color: var(--nav-hover);
     cursor: pointer;
 }
 
@@ -78,69 +97,57 @@ footer{
 
 /* Hamburgare meny */
 
-.fade-layer{
+.fade-layer {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    inset: 0;
+    background-color: var(--overlay-bg);
     z-index: 5;
 }
 
-.fade-layer.visible{
+.fade-layer.visible, .menu.show {
     display: block;
 }
 
 .menu{
-    background-image: url("../img/backgroundconcrete.jpg");
+    background-image: var(--bg-image);
     height: 100vh;
     width: 70vw;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
     display: none;
-}
-
-.menu.show{
-    display: block;
 }
 
 .material-icons{
     padding: 5px;
     margin: 5px;
-    background-color: rgba(232, 232, 232, 0.6);
+    background-color: var(--icon-bg);
     border-radius: 10px;
 }
 
 .material-icons:hover{
-    background-color: rgba(169, 169, 169, 0.6);
+    background-color: var(--nav-hover);
     cursor: pointer;
 }
 
-.mobilNavbox{
-    /* display: block; */
+.mobilNavbox {
     justify-content: center;
     align-items: center;
     width: 80%;
     height: 40px;
-    background-color: rgb(193, 193, 193);
+    background-color: var(--nav-mobile-bg);
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     display: flex;
     text-transform: uppercase;
-    list-style-type: none;
     font-weight: bold;
 }
 
-ul{
-    list-style-type: none;
-}
-
 .mobilNavbox:hover{
-    background-color: rgba(169, 169, 169);
+    background-color: var(--nav-hover);
 }
 
 /* Index  */
@@ -156,10 +163,18 @@ ul{
     "ft";
 }
 
+#indeximg {
+    grid-area: img;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--border-color);
+}
+
 #indexmain{
     grid-area: imn;
     text-align: center;
-    border-top-style: solid;
+    border-top: 2px solid var(--border-color);
 }
 
 #h1welcome{
@@ -172,7 +187,6 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-rows: 300px 40px 1fr 50px;
-    grid-template-columns: 1fr;
     grid-template-areas: 
     "img"
     "nv"
@@ -184,6 +198,7 @@ ul{
     grid-area: cmn;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     padding: 20px;
     gap: 0;
@@ -197,10 +212,10 @@ ul{
 .card {
     flex: 0 0 25%;
     width: 25%;
-    box-sizing: border-box;
     padding: 20px;
-    border-left: 2px solid;
-    border-right: 2px solid;
+    box-sizing: border-box;
+    border-left: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,20 +245,14 @@ ul{
 
 #historymain{
     grid-area: hmn;
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 10%;
+    padding: 20px 10% 20px 20%;
     display: flex;
     flex-direction: column;
     text-align: start;
-    border-right: solid;
+    border-right: 2px solid var(--border-color);
 }
 
-#historymain h2{
-    text-align: center;
-}
-
-.quote{
+#historymain h2, .quote{
     text-align: center;
 }
 
@@ -255,6 +264,7 @@ ul{
 .historyimg{
     width: 100%;
     padding-top: 2px;
+    display: block;
 }
 
 /* Tider */
@@ -276,46 +286,63 @@ ul{
     display: flex;
     grid-area: titl;
     justify-content: center;
+    align-items: center;
+}
+
+#sec1, #sec2, #sec3 {
+    text-align: center;
 }
 
 #sec1 {
-    padding-left: 25%;
     grid-area: sec1;
-    text-align: center;
+    padding-left: 25%;
 }
 #sec2 {
     grid-area: sec2;
-    text-align: center;
-    border-right: solid;
-    border-left: solid;
+    border-right: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
 }
 #sec3 {
     padding-right: 25%;
     grid-area: sec3;
-    text-align: center;
 }
 
 .timeimg{
     height: 18vh;
+    object-fit: cover;
 }
 
-/* MOBIL */
+/* Desktop and Mobile */
 
-.menu-button{
-    grid-area: mnbutt;
+@media screen and (min-width: 800px){
+    .menu-button{
+        display: none;
+    }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 799px){
+    .menu-button{
+        grid-area: mnbutt;
+    }
+
     nav{
         display: none;
+    }
+
+    h1{
+        font-size: 2rem;
     }
 
     #indeximg{
         height: 140px;
     }
 
-    #indexwrapper{
+    #indexwrapper, #contactwrapper, #historywrapper {
         grid-template-rows: 100px 40px auto 50px;
+        grid-template-columns: 100%;
+    }
+
+    #indexwrapper{
         grid-template-areas: 
         "img"
         "mnbutt"
@@ -323,15 +350,7 @@ ul{
         "ft";
     }
 
-    h1{
-        font-size: 2rem;
-    }
-
     #contactwrapper{
-        display: grid;
-        height: 100vh;
-        grid-template-rows: 100px 40px auto 50px;
-        grid-template-columns: 1fr;
         grid-template-areas: 
         "img"
         "mnbutt"
@@ -343,39 +362,10 @@ ul{
         flex: 1 1 200px;
         border-left: none;
         border-right: none;
-        border-top: 1px solid black;
-    }
-
-    #timeswrapper{
-        display: grid;
-        height: 100vh;
-        grid-template-rows: 100px 40px 100px 50% 50% 50% 50px;
-        grid-template-areas: 
-        "img"
-        "mnbutt"
-        "titl"
-        "sec1"
-        "sec2" 
-        "sec3"
-        "ft";
-    }
-
-    #sec1,#sec3{
-        padding: 0;
-        border-top: solid;
-    }
-
-    #sec2{
-        border-right: none;
-        border-left: none;
-        border-top: solid;
+        border-top: 1px solid var(--border-color);
     }
 
     #historywrapper{
-        display: grid;
-        height: 100vh;
-        grid-template-rows: 100px 40px auto 50px;
-        grid-template-columns: 100%;
         grid-template-areas: 
         "img"
         "mnbutt"
@@ -388,12 +378,26 @@ ul{
         padding: 20px;
         border-right: none;
     }
-}
 
-/* DESKTOP */
+    #timeswrapper{
+        grid-template-rows: 100px 40px 70px 40% 40% 40% 50px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "img"
+        "mnbutt"
+        "titl"
+        "sec1"
+        "sec2" 
+        "sec3"
+        "ft";
+    }
 
-@media screen and (min-width: 800px){
-    .menu-button{
-        display: none;
+    #sec1, #sec2, #sec3 {
+        border: none;
+        border-top: 2px solid var(--border-color);
+    }
+
+    #sec1,#sec3{
+        padding: 0;
     }
 }
