@@ -53,11 +53,6 @@ p, a {
     color: var(--text-color);
 }
 
-/* a{
-    width: 100px;
-    opacity: 1;
-} */
-
 ul{
     list-style-type: none;
 }
