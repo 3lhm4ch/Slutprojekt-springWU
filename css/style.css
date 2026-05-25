@@ -467,7 +467,6 @@ footer {
         height: 170px; 
     }
 
-    /* Ändrat för att dölja bildrader på mobil */
     #indexwrapper, #contactwrapper, #historywrapper {
         grid-template-rows: 100px 70px auto auto;
         grid-template-columns: 100%;
@@ -497,7 +496,6 @@ footer {
         "ft";
     }
 
-    /* HÄR DÖLJS BILDGALLERIERNA HELT PÅ MOBIL */
     #historyleft, #historyright {
         display: none;
     }
@@ -518,7 +516,6 @@ footer {
         "ft";
     }
 
-    /* Tar bort sidobordrarna på mobilen så det ser rent ut */
     #indexmain, #contactmain, #historymain, #title, #timescontent, #timesextra {
         border-left: none;
         border-right: none;
